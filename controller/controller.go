@@ -80,10 +80,26 @@ func getCheckInRecord(c *fiber.Ctx) {
 		// 若日期為今天，則進行時間判斷
 		if isToday(parameterDate) {
 
-			now := time.Now().In(time.FixedZone("", 8*60*60))
+			//現在
+			now := time.Now().Local() //In(time.FixedZone("", 8*60*60))
 
+			//今天
+			today := time.Date(
+				now.Year(),
+				time.Month(now.Month()),
+				now.Day(),
+				0,
+				0,
+				0,
+				0,
+				time.Local,
+			)
+
+			fmt.Println("now=", now)     //filter 型態 Map[date:2020-01-01]
+			fmt.Println("today=", today) //filter 型態 Map[date:2020-01-01]
 			// 過濾器
 			filter = bson.M{
+				"datetimetoday":   today,
 				"datetimecheckin": bson.M{`$lt`: now},
 			}
 			fmt.Println("filter=", filter) //filter 型態 Map[date:2020-01-01]
