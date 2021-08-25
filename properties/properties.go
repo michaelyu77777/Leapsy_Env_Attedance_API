@@ -19,4 +19,6 @@ const (
 
 	// PortOfMongoDB :MongoDB的Port
 	PortOfMongoDB string = "27017"
+
+	HostOfMongoDB string = "172.17.0.2"
 )
