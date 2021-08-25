@@ -1,4 +1,3 @@
-//package main
 package controller
 
 import (
@@ -12,8 +11,11 @@ import (
 	"github.com/gofiber/fiber"
 	"go.mongodb.org/mongo-driver/bson"
 
-	"my-rest-api/db"
-	"my-rest-api/settings"
+	"leapsy.com/db"
+	// "my-rest-api/db"
+	settings "leapsy.com/properties"
+	// "my-rest-api/settings"
+	//"leapsy.com/model"
 	//"my-rest-api/model" //只有在create(insert)或update 才需要import model
 )
 

@@ -1,4 +1,4 @@
-package settings
+package properties
 
 const (
 	// DbName :資料庫名

@@ -1,15 +1,14 @@
-//package main
-
 package db
 
 import (
 	"context"
 	"log"
-	"my-rest-api/settings"
 
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"go.mongodb.org/mongo-driver/mongo/readpref"
+
+	settings "leapsy.com/properties"
 )
 
 //GetMongoDbConnection 取得 mongodb連線
