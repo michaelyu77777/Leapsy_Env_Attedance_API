@@ -12,13 +12,12 @@ const (
 
 	// const CollectionName = "persion"                                //Collection //範例程式
 
-	// PortOfAPI :開API的Port
-	//const PortOfAPI = 8081 //API port
-	//PortOfAPI = 8000 //API port
+	// API Port
 	PortOfAPI = 8082 //API port
 
 	// PortOfMongoDB :MongoDB的Port
 	PortOfMongoDB string = "27017"
 
-	HostOfMongoDB string = "172.17.0.2"
+	//docker HostOfMongoDB string = "172.17.0.2"
+	HostOfMongoDB string = "localhost"
 )
