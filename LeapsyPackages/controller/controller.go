@@ -33,8 +33,8 @@ func NewPersonController() {
 	app := fiber.New()
 
 	/*建立 checkInRecord 路徑*/
-	app.Get("/checkInRecord/query/:date", getCheckInRecord) //應到人員資料
-	app.Get("/checkInRecord/query/:year/:month/:day", getCheckInRecordYMD)
+	//app.Get("/checkInRecord/query/:date", getCheckInRecord) // 年-月-日
+	app.Get("/checkInRecord/query/:year/:month/:day", getCheckInRecordYMD) // 年/月/日
 	// app.Get("/checkInRecord/attendance/:date?", getAttendanceOfCheckInStatistics) //實到人員資料
 	// app.Get("/checkInRecord/notArrived/:date?", getNotArrivedOfCheckInStatistics) //未到人員資料
 	//app.Post("/person", createPerson)
